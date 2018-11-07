@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Gassy Boi - Track Your Gas Milage and Spending</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <nav id="top" class="nav-wrapper grey darken-3">
+        <div class="container">
+            <a href="#top" class="brand-logo">Gassy Boi</a>
+            <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#download">Download</a></li>
+            </ul>
+        </div>
+    </nav>
+    <ul id="mobile-nav" class="sidenav">
+        <li><a href="#top">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#download">Download</a></li>
+    </ul>
+    <div class="parallax-container">
+        <div class="parallax"><img src="./images/road1.jpg"></div>
+    </div>
+
+    <div id="about" class="row section scrollspy">
+        <div class="col s12 l8 push-l2 center-align">
+            <h1>About</h1>
+            <p>Gassy Boi is a cross platform mobile app that tracks your gas mileage and spending.</p>
+        </div>
+    </div>
+    <div class="parallax-container">
+        <div class="parallax"><img src="./images/road2.jpg"></div>
+    </div>
+    <div id="gallery" class="row container section scrollspy center-align">
+        <h1>Gallery</h1>
+        <div class="col s6 m4 l2">
+            <img src="./images/gallery/home.png" data-caption="User Submission Page" class="responsive-img materialboxed">
+        </div>
+        <div class="col s6 m4 l2">
+            <img src="./images/gallery/chart_pie.png" data-caption="A pie chart that depicts the relative frequency of all gas stations you've visited."
+                class="responsive-img materialboxed">
+        </div>
+        <div class="col s6 m4 l2">
+            <img src="./images/gallery/chart_prices.png" data-caption="A series graph that depicts gas prices per station over time."
+                class="responsive-img materialboxed">
+        </div>
+        <div class="col s6 m4 l2">
+            <img src="./images/gallery/settings.png" data-caption="User Settings Page" class="responsive-img materialboxed">
+        </div>
+        <div class="col s6 m4 l2">
+            <img src="./images/gallery/home.png" class="responsive-img materialboxed">
+        </div>
+        <div class="col s6 m4 l2">
+            <img src="./images/gallery/drawer.png" data-caption="Drawer" class="responsive-img materialboxed">
+        </div>
+    </div>
+    </div>
+    <div class="parallax-container">
+        <div class="parallax"><img src="./images/road3.jpeg"></div>
+    </div>
+    <div id="download" class="row section scrollspy">
+        <div class="col s12 l8 push-l2 center-align">
+            <h1>Downloads</h1>
+            <p>No downloads available at this time.</p>
+        </div>
+    </div>
+    <div class="parallax-container">
+        <div class="parallax"><img src="./images/road4.jpeg"></div>
+    </div>
+    <footer class="page-footer grey darken-3">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">More Info</h5>
+                    <p class="grey-text text-lighten-4">Gassy Boi is a side project of mine, but I am continually adding
+                        new features and fixing bugs. Check back frequently to see new features.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">Contact</a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://github.com/hadley31/gas-app" target="_blank">Github</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                Copyright &copy; 2018 hadley31 
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.parallax').parallax();
+            $('.sidenav').sidenav();
+            $('.materialboxed').materialbox();
+            $('.carousel').carousel();
+
+            var elems = document.querySelectorAll('.scrollspy');
+            var instances = M.ScrollSpy.init(elems, {
+                'trottle': 10,
+                'scrollOffset': 60
+            });
+        });
+    </script>
+</body>
+
+</html>
