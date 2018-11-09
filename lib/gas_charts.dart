@@ -145,7 +145,7 @@ List<charts.Series<UserSubmission, DateTime>> getGasPriceVsDate(List<UserSubmiss
     charts.Series<UserSubmission, DateTime>(
       id: 'Gas Price vs Date',
       domainFn: (UserSubmission point, _) => point.date,
-      measureFn: (UserSubmission point, _) => point.getGasPrice(),
+      measureFn: (UserSubmission point, _) => point.gasPrice,
       data: data,
     ),
   ];
@@ -156,7 +156,7 @@ List<charts.Series<UserSubmission, DateTime>> getMPGVsDate(List<UserSubmission> 
     charts.Series<UserSubmission, DateTime>(
       id: 'Stations',
       domainFn: (UserSubmission point, _) => point.date,
-      measureFn: (UserSubmission point, _) => point.getMilesPerGallon(),
+      measureFn: (UserSubmission point, _) => point.milesPerGallon,
       data: data,
     ),
   ];
@@ -167,7 +167,7 @@ List<charts.Series<UserSubmission, DateTime>> getMilesPerUSDVsDate(List<UserSubm
     charts.Series<UserSubmission, DateTime>(
       id: 'Stations',
       domainFn: (UserSubmission point, _) => point.date,
-      measureFn: (UserSubmission point, _) => point.getMilesPerUSD(),
+      measureFn: (UserSubmission point, _) => point.milesPerUSD,
       data: data,
     ),
   ];
@@ -204,7 +204,7 @@ List<charts.Series<UserSubmission, DateTime>> getGasPricePerStationVsDate(List<U
       id: mapEntry.key,
       data: mapEntry.value,
       domainFn: (entry, _) => entry.date,
-      measureFn: (entry, _) => entry.getGasPrice(),
+      measureFn: (entry, _) => entry.gasPrice,
       insideLabelStyleAccessorFn: (_, __) => charts.TextStyleSpec(color: charts.Color.black, fontSize: 12),
       outsideLabelStyleAccessorFn: (_, __) => charts.TextStyleSpec(color: charts.Color.white, fontSize: 15),
     );

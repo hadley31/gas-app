@@ -216,7 +216,7 @@ class _EditSubmissionPageState extends State<_EditSubmissionPage> {
             child: Text('Delete'),
             color: Colors.red,
             onPressed: () {
-              deleteUserSubmission(widget.submission.documentID);
+              deleteUserSubmission(documentID: widget.submission.documentID);
               Navigator.pop(context);
             },
           ),
