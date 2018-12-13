@@ -11,7 +11,7 @@ class GasApp extends StatelessWidget {
   @override
   build(BuildContext context) {
     return MaterialApp(
-      title: 'Gassy Boi',
+      title: 'Gas App',
       theme: ThemeData(
         brightness: Brightness.dark,
         accentColorBrightness: Brightness.light,
@@ -41,7 +41,7 @@ class _HomePageState extends State<HomePage> {
   build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Gassy Boi'),
+        title: const Text('Gas App'),
       ),
       body: SafeArea(
         top: false,
